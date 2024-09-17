@@ -34,6 +34,8 @@ def _init_libm():  # pragma: nocover
         _fe_upward, _fe_downward = 2, 3
     elif processor == 'sparc':
         _fe_upward, _fe_downward = 0x80000000, 0xC0000000
+    elif processor == 'arm':
+        _fe_upward, _fe_downward = 0x400000, 0x800000
     else:
         _fe_upward, _fe_downward = 0x0800, 0x0400
 
